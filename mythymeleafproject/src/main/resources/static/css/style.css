@@ -1,0 +1,12 @@
+@charset "UTF-8";
+
+.logo{
+	width: 100px;
+	height: auto;
+	margin: 10px;
+	padding: 10px;
+}
+
+.valid{
+	color:red;
+}

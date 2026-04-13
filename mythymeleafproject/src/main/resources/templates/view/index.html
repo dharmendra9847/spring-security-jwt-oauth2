@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Home</title>
+</head>
+<body>
+	
+	<!-- HEADER -->
+	<div th:replace="view/header :: myheader"></div>
+
+
+	<h2>THIS IS MY HOMEPAGE</h2>
+	<a th:href="@{/test/page1}">Page1</a><span><strong> | </strong></span>
+	<a th:href="@{/test/form}">Form</a>
+	
+	<!-- FOOTER -->
+	<div th:replace="view/footer :: myfooter"></div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Page1</title>
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+<body>
+
+	<!-- HEADER -->
+	<div th:replace="view/header :: myheader"></div>
+	
+	<a th:href="@{/test/home}">Home</a><span><strong> | </strong></span>
+	<a th:href="@{/test/form}">Form</a>
+
+
+	<h2>THIS IS MY PAGE1</h2>
+	<p th:text="${data} ">This is default page</p>
+	
+	<ul>
+	
+		<!-- <li th:each="item : ${list}" th:text="${item}"> -->
+		
+		<li th:each="item : ${list}">
+		
+			<span th:if="${item=='Kaju'}" th:text="${item+'*****'}"></span>
+			<span th:unless="${item=='Kaju'}" th:text="${item}"></span>
+		
+		</li>
+	
+	</ul>
+	
+	<br>
+	
+	<!-- INLINE CSS -->
+	<!-- <img style="width: 300px; height: auto;" class="logo" alt="" th:src="@{/logo/logo.png}"> -->
+	<img class="logo" alt="" th:src="@{/logo/logo.png}">
+	
+	<!-- FOOTER -->
+	<div th:replace="view/footer :: myfooter"></div>
+</body>
+</html>
